@@ -13,12 +13,14 @@ Logic Separation	Internal pure functions isolate the calculation logic.
 Input Validation	Includes a modifier (checkNumber) to validate inputs before executing certain operations.
 Event Logging	Emits events for every operation to provide full transparency on-chain.
 Persistent State	Maintains a variable (resultado) that can be updated through multiplication operations.
+
 📜 Smart Contract Details
+
 ⚙️ Modifiers
 Modifier	Description
 checkNumber(uint num1_)	Ensures that num1_ equals 10 before executing the operation. If not, the transaction reverts. Used in multiplier2.
-📡 Events
 
+📡 Events
 Each arithmetic operation emits an event with the inputs and computed result, allowing easy tracking in transaction logs.
 
 Event	Description
@@ -26,6 +28,7 @@ Addition	Triggered when adding two numbers.
 Subtraction	Triggered when subtracting two unsigned integers.
 Subtraction2	Triggered when subtracting signed integers using int256.
 Split	Triggered when dividing two signed integers.
+
 💻 Contract Functions
 
 The contract is divided into public functions (user interface) and internal pure functions (core logic).
@@ -46,6 +49,7 @@ These functions contain the mathematical logic without modifying contract state.
 Function	Visibility	Description
 subtraction_logic(uint num1, uint num2)	internal pure	Pure subtraction logic for unsigned integers.
 subtraction_logic2(int num1, int num2)	internal pure	Pure subtraction logic for signed integers.
+
 🛠️ How to Use
 🔧 Prerequisites
 
